@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="./assets/bow.svg" />
+<title>TikTok Followers Checker</title>
+<link rel="stylesheet" href="./assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>TikTok Follower Analyzer</h1>
+  <hr>
+</header>
+
+<div class="wrapper">
+  <form id="uploadForm">
+    <input type="file" id="jsonFile" accept=".json,.zip" required style="display: none;">
+    <div class="file-upload-area" id="customUploadArea">
+      <p>Click here to upload your TikTok file (.zip or .json)</p>
+    </div>
+    <button id="analyzeButton" type="submit">Analyze</button>
+  </form>
+
+  <div id="status"></div>
+  <h2 id="resultsHeader" style="display: none;">Results:</h2>
+  <pre id="results" style="display: none;"></pre>
+
+</div>
+
+<script src="./js/unfollow.js"></script>
+
+</body>
+</html>

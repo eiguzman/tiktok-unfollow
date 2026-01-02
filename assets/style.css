@@ -1,0 +1,96 @@
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background-color: #F5DCE0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    width: 60%;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+
+#uploadForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-upload-area {
+    width: 80%;
+    height: 10rem;
+    border: 2px dashed #999;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #F5D6E0;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin: 20px auto;
+}
+
+.file-upload-area:hover {
+    background-color: #DFC5CA;
+    border-color: #666;
+}
+
+.file-upload-area p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+#analyzeButton {
+    width: 30%;
+    margin: 1rem auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #F5D6E0;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 8px;
+}
+
+#analyzeButton:hover {
+    background-color: #DFC5CA;
+    border-color: #666;    
+}
+
+#status {
+    margin: 0 auto;
+}
+
+#resultsHeader {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#results {
+    width:80%;
+    margin: 0 auto;
+    white-space: pre-wrap;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.loading {
+    font-style: italic;
+    color: #555;
+}
