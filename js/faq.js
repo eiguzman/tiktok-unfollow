@@ -41,11 +41,11 @@ const faqData = [
 	},	
 	{
 		title: "I encountered an error in your site. How can I contact you about this?",
-		ans: "Issues can be posted on my GitHub repo's <a class=\"faq-link\" href=\"https://github.com/eiguzman/tiktok-unfollow/issues\">Issues page</a> (GitHub account required to post)."
+		ans: "Issues can be posted on my GitHub repo's <a class=\"faq-link\" href=\"https://github.com/eiguzman/tiktok-unfollow/issues\" target=\"_blank\" rel=\"noopener noreferrer\">Issues page</a> (GitHub account required to post)."
 	},	
 	{
 		title: "Is there any way I can support you for your work?",
-		ans: "Every little bit helps! Follow <a class=\"faq-link\" href=\"https://www.tiktok.com/@jessmorales__\">@jessmorales__</a> if you like this site or the pink aesthetic. Share this site with your friends and followers if they need this tool. Data and website management is expensive; please consider supporting me financially via <a class=\"faq-link\" href=\"PayPal.me/eiguzman\">my PayPal link</a> (even $1 or less goes a long way!)"
+		ans: "Every little bit helps! Follow <a class=\"faq-link\" href=\"https://www.tiktok.com/@jessmorales__\" target=\"_blank\" rel=\"noopener noreferrer\">@jessmorales__</a> if you like this site or the pink aesthetic. Share this site with your friends and followers if they need this tool. Data and website management is expensive; please consider supporting me financially via <a class=\"faq-link\" href=\"https://www.paypal.com/paypalme/eiguzman\" target=\"_blank\" rel=\"noopener noreferrer\">my PayPal link</a> (even $1 or less goes a long way!)"
 	}
 ]
 
