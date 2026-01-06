@@ -51,6 +51,18 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
   // Function to process JSON data
   const processJsonData = (jsonData) => {
     try {
+      // Validate presence of top-level key
+      if (!jsonData.hasOwnProperty("Profile And Settings")) {
+        throw new Error('Invalid file');
+      }
+    }
+    catch (err) {
+      analyzeButton.disabled = true;
+      statusDiv.textContent = 'Error: ' + error.message;
+      return;
+    }
+
+    try {
       // Prepare payload for API
       const payload = jsonData;
       statusDiv.innerHTML = '<span class="loading">Sending data to server...</span>';
@@ -63,6 +75,9 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
         body: JSON.stringify(payload)
       })
       .then(response => {
+        if (response.status === 429) {
+          throw new Error('You have reached the maximum allowed requests per day. Please try again in 24 hours.');
+        }
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -77,7 +92,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
       })
       .catch(error => {
         statusDiv.textContent = 'Error: ' + error.message;
-        analyzeButton.disabled = false;
+        analyzeButton.disabled = true;
       });
     } catch (err) {
       alert('Invalid JSON data.');
