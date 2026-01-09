@@ -1,11 +1,25 @@
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #F5DCE0;
 }
 
 body {
     display: flex;
     flex-wrap: wrap;
+    background-color: #F5DCE0;
+}
+
+/* Header */
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: .8rem;
+  font-family: inherit;
+  z-index: 1000;
+}
+
+#theme-selector {
+    border-radius: 8px;
 }
 
 h1 {
@@ -21,6 +35,7 @@ hr {
     width: 60%;
 }
 
+/* Body */
 .wrapper {
     display: flex;
     height: auto;
@@ -201,6 +216,7 @@ form {
     text-decoration: none;
 }
 
+/* Footer */
 footer {
     bottom: 2rem;
     width: 100%;
@@ -217,7 +233,176 @@ footer {
     gap: 20rem;
 }
 
+/* Themes */
+[data-theme='dark'] body {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+[data-theme='dark'] .file-upload-area {
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+[data-theme='dark'] .file-upload-area:hover {
+    background-color: rgb(75, 75, 75);
+    border-color: #666;
+    color: white;
+}
+
+[data-theme='dark'] .file-upload-area p {
+    color: white;
+}
+
+[data-theme='dark'] .pushable:disabled {
+    background-color: rgb(50, 50, 50);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme='dark'] .pushable {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+[data-theme='dark'] .pushable:hover {
+    background-color: rgb(75, 75, 75);
+    border-color: #666;    
+}
+
+[data-theme='dark'] .loading {
+    color: rgb(150, 150, 150);
+}
+
+[data-theme='dark'] .image-container img {
+    opacity: .8;
+}
+
+[data-theme='dark'] .nav-button {
+    color: white;
+}
+
+[data-theme='dark-pink'] body {
+    background-color: rgb(0, 0, 0);
+    color: #F5DCE0;
+}
+
+[data-theme='dark-pink'] .file-upload-area {
+    background-color: rgba(223, 197, 202, 0.5);
+}
+
+[data-theme='dark-pink'] .file-upload-area:hover {
+    background-color: rgba(223, 197, 202, 0.8);
+    border-color: #666;
+}
+
+[data-theme='dark-pink'] .file-upload-area p {
+    color: #F5DCE0;
+}
+
+[data-theme='dark-pink'] .pushable:disabled {
+    background-color: rgba(223, 197, 202, 0.3);
+    color: rgba(245, 220, 224, 0.3);
+}
+
+[data-theme='dark-pink'] .pushable {
+    background-color: rgba(223, 197, 202, 0.5);
+    color: #F5DCE0;
+}
+
+[data-theme='dark-pink'] .pushable:hover {
+    background-color: rgba(223, 197, 202, 0.8);
+    border-color: #666;    
+}
+
+[data-theme='dark-pink'] .loading {
+    color: rgba(245, 220, 224, 0.7);
+}
+
+[data-theme='dark-pink'] .image-container img {
+    opacity: .8;
+}
+
+[data-theme='dark-pink'] .nav-button {
+    color: #F5DCE0;
+}
+
+[data-theme='tiktok'] body {
+    background-color: rgb(0, 0, 0);
+    color: white
+}
+
+[data-theme='tiktok'] h1{
+    background-image: linear-gradient(135deg, #25F4EE, #FE2C55);
+    color: transparent;
+    background-clip: text;
+}
+
+[data-theme='tiktok'] h2{
+    background-image: linear-gradient(135deg, #25F4EE, #FE2C55);
+    color: transparent;
+    background-clip: text;
+}
+
+[data-theme='tiktok'] h3{
+    background-image: linear-gradient(135deg, #25F4EE, #FE2C55);
+    color: transparent;
+    background-clip: text;
+}
+
+
+[data-theme='tiktok'] .file-upload-area {
+    background-color: black;
+    background-image: linear-gradient(135deg, rgba(37, 244, 237, 0.5), rgba(254, 44, 86, .8));
+    border-color: rgba(37, 244, 237, 0.3);
+}
+
+[data-theme='tiktok'] .file-upload-area:hover {
+    background-color: gray;
+    border-color: rgba(37, 244, 237, 0.5);
+}
+
+[data-theme='tiktok'] .file-upload-area p {
+    color: white;
+}
+
+[data-theme='tiktok'] .pushable:disabled {
+    background-color: black;
+    background-image: linear-gradient(135deg, rgba(37, 244, 237, 0.5), rgba(254, 44, 86, .8));
+    color: rgba(255, 255, 255, 0.3);
+}
+
+[data-theme='tiktok'] .pushable {
+    background-color: black;
+    background-image: linear-gradient(135deg, rgba(37, 244, 237, 0.5), rgba(254, 44, 86, .8));
+    color: white;
+}
+
+[data-theme='tiktok'] .pushable:hover {
+    background-color: gray;
+    border-color: rgba(37, 244, 237, 0.5);   
+}
+
+[data-theme='tiktok'] .loading {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='tiktok'] .image-container img {
+    opacity: .8;
+}
+
+[data-theme='tiktok'] #prevBtn {
+    color: #25F4EE;
+}
+
+[data-theme='tiktok'] #nextBtn {
+    color: #FE2C55;
+}
+
+/* Phones */
 @media (max-width: 480px) {
+    header {
+        margin-top: 1rem;
+    }
     hr {
         width: 100%;
     }
