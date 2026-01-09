@@ -23,19 +23,28 @@ hr {
 
 .wrapper {
     display: flex;
-    width: 100%;
     height: auto;
     flex-direction: column;
     margin: 0 auto;
 }
 
-#uploadForm {
+.main {
+    padding: 0 10rem;
+}
+
+#subtitle {
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .file-upload-area {
-    width: 80%;
+    width: 100%;
     height: 10rem;
     border: 2px dashed #999;
     border-radius: 8px;
@@ -45,7 +54,6 @@ hr {
     cursor: pointer;
     background-color: #F5D6E0;
     transition: background-color 0.3s, border-color 0.3s;
-    margin: 20px auto;
 }
 
 .file-upload-area:hover {
@@ -60,41 +68,57 @@ hr {
     text-align: center;
 }
 
-#analyzeButton {
-    width: 30%;
+.pushable {
     margin: 1rem auto;
-    padding: 10px 20px;
+    padding: 1rem .5rem;
     font-size: 16px;
     background-color: #F5D6E0;
     transition: background-color 0.3s, border-color 0.3s;
     border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
 }
 
-#analyzeButton:hover {
+.pushable:hover {
     background-color: #DFC5CA;
     border-color: #666;    
 }
 
-#status {
+#status, #status2 {
     margin: 0 auto;
 }
 
-#resultsHeader {
-    width: 80%;
-    margin: 0 auto;
+#resultsHeader, #resultsHeader2 {
+    margin: 1rem 0 0 0;
+    text-align: center;
 }
 
-#results {
-    width:80%;
-    margin: 0 auto;
+#results, #results2 {
+    margin: 0;
     white-space: pre-wrap;
     padding: 10px;
     border-radius: 5px;
 }
 
-#subtitle {
-    text-align: center;
-    margin-bottom: 0;
+.two-forms {
+    display: flex;
+    margin: 0;
+    gap: 1rem;
+}
+
+.follow-form {
+    flex: 1;
+    width: 165px;
+    justify-content: center;
+    word-break: break-all;
+}
+
+#uploadForm2, #uploadForm3 {
+    flex: 1;
+}
+
+.two-forms-button {
+    margin: 0 auto;
 }
 
 .loading {
@@ -110,35 +134,35 @@ hr {
 }
 
 .step-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
 }
 
 .image-container {
-  width: 250px;
-  height: 482px;
-  overflow: hidden;
-  position: relative;
+    width: 250px;
+    height: 482px;
+    overflow: hidden;
+    position: relative;
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  display: none; /* hide all images initially */
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
 }
 
 .nav-button {
-  background-color: transparent;
-  border: none;
-  font-size: 2em;
-  cursor: pointer;
-  padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0 10px;
 }
 
 #imageDescription {
@@ -149,28 +173,28 @@ hr {
 }
 
 .faq-carousel {
-  display: flex;
-  justify-content: center;
-  margin: 1rem auto;
-  min-height: 381px;
-  max-width: 450px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    min-height: 381px;
+    max-width: 450px;
 }
 
 .faq-container {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .faq-item {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #faqTitle {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 #faqAnswer {
-  white-space: pre-wrap;
-  text-align: justify;
+    white-space: pre-wrap;
+    text-align: justify;
 }
 
 .faq-link {
@@ -194,6 +218,15 @@ footer {
 }
 
 @media (max-width: 480px) {
+    hr {
+        width: 100%;
+    }
+    .main {
+        padding: 0;
+    }
+    .large {
+        width: 80%;
+    }
     .footer {
         font-size: 6pt;
         gap: 2rem;

@@ -1,15 +1,19 @@
 const faqData = [
 	{
 		title: "What is this website?",
-		ans: "Tiktok Follower Analyzer is a user-friendly website that helps you identify which of your followers are not following you back. If you notice a decrease in followers, they will appear if you followed them. This tool is not for checking all unfollowers; but only those that you followed. This website works on mobile devices and on desktop browsers."
+		ans: "Tiktok Follower Analyzer is a user-friendly website that helps you identify which of your followers are not following you back. If you notice a decrease in followers, they will appear if you followed them. A tool to check all of your followers that unfollowed you is also available. This website works on mobile devices and on desktop browsers."
 	},
 	{
 		title: "How does it work?",
-		ans: "Using a script that cross-references the accounts you follow with those that follow you, you can create a list of accounts that do not follow you back."
+		ans: "Using a script that cross-references the accounts you follow with those that follow you, you can create a list of accounts that do not follow you back. Additionally, by comparing your followers over two data files, you can create a list of accounts who have unfollowed you."
 	},
 	{
 		title: "How do I find my unfollowers?",
-		ans: "If your friends list is not the same number as your following list, there are accounts you follow that do not follow you back. You will need to have your data ready before using this tool. You can request your data using the instructions above."
+		ans: "If your friends list is not the same number as your following list, there are accounts you follow that do not follow you back. You will need to have your data ready before using this tool. You can request your data using the instructions above. You need to request your data once to check friend unfollows, and twice for all unfollows."
+	},
+	{
+		title: "How can I find all the people who unfollowed me instead of just those in my friends list?",
+		ans: "In order to find anyone that unfollowed you, even if you never followed them back, you would need to request your data twice: once BEFORE you notice someone has unfollowed, and once AFTER you notice. Do not trust downloadable apps that require you to log in, as any malicious attack on that app can put your data at risk!"
 	},
 	{
 		title: "Do you keep or collect my data after it is uploaded?",
@@ -33,7 +37,7 @@ const faqData = [
 	},	
 	{
 		title: "Can I check multiple accounts using this tool?",
-		ans: "Yes. Each request must be made individually, and each .zip or .json file must be uploaded and analyzed individually. After each analysis, the Analyze button will become unavailable until a new file is uploaded."
+		ans: "Yes. Each request must be made individually, and each .zip or .json file must be uploaded and analyzed individually. When comparing followers over time, both files must be from the same account. After each analysis, the Analyze button will become unavailable until a new file is uploaded."
 	},	
 	{
 		title: "The website says my file size is too big. What happened?",
@@ -58,9 +62,9 @@ const faqNextBtn = document.getElementById('faqNextBtn');
 
 // Function to display FAQ at current index
 function showFAQ(index) {
-  const faq = faqData[index];
-  faqTitleEl.innerHTML = faq.title;
-  faqAnswerEl.innerHTML = faq.ans;
+	const faq = faqData[index];
+	faqTitleEl.innerHTML = faq.title;
+	faqAnswerEl.innerHTML = faq.ans;
 }
 
 // Initialize first FAQ
@@ -68,13 +72,13 @@ showFAQ(currentFAQIndex);
 
 // Button navigation
 faqPrevBtn.addEventListener('click', () => {
-  currentFAQIndex = (currentFAQIndex - 1 + faqData.length) % faqData.length;
-  showFAQ(currentFAQIndex);
+	currentFAQIndex = (currentFAQIndex - 1 + faqData.length) % faqData.length;
+	showFAQ(currentFAQIndex);
 });
 
 faqNextBtn.addEventListener('click', () => {
-  currentFAQIndex = (currentFAQIndex + 1) % faqData.length;
-  showFAQ(currentFAQIndex);
+	currentFAQIndex = (currentFAQIndex + 1) % faqData.length;
+	showFAQ(currentFAQIndex);
 });
 
 // Swipe gestures
@@ -84,33 +88,30 @@ let startX_faq = 0;
 let isDragging_faq = false;
 
 faqContainer.addEventListener('touchstart', (e) => {
-  if (e.touches.length === 1) {
-    startX_faq = e.touches[0].clientX;
-    isDragging_faq = true;
-  }
+	if (e.touches.length === 1) {
+		startX_faq = e.touches[0].clientX;
+		isDragging_faq = true;
+	}
 });
 
 faqContainer.addEventListener('touchmove', (e) => {
-  if (!isDragging_faq) return;
-  const touchX = e.touches[0].clientX;
-  const deltaX = touchX - startX_faq;
-  // Optional: Add visual feedback during swipe
+	if (!isDragging_faq) return;
+	const touchX = e.touches[0].clientX;
+	const deltaX = touchX - startX_faq;
 });
 
 faqContainer.addEventListener('touchend', (e) => {
-  if (!isDragging_faq) return;
-  isDragging_faq = false;
-  const endX = e.changedTouches[0].clientX;
-  const deltaX = endX - startX_faq;
-  const threshold = 50; // swipe sensitivity
-
-  if (deltaX > threshold) {
-    // Swipe right -> previous FAQ
-    currentFAQIndex = (currentFAQIndex - 1 + faqData.length) % faqData.length;
-  } else if (deltaX < -threshold) {
-    // Swipe left -> next FAQ
-    currentFAQIndex = (currentFAQIndex + 1) % faqData.length;
-  }
-
-  showFAQ(currentFAQIndex);
+	if (!isDragging_faq) return;
+	isDragging_faq = false;
+	const endX = e.changedTouches[0].clientX;
+	const deltaX = endX - startX_faq;
+	const threshold = 50; // swipe sensitivity
+	if (deltaX > threshold) {
+		// Swipe right -> previous FAQ
+		currentFAQIndex = (currentFAQIndex - 1 + faqData.length) % faqData.length;
+	} else if (deltaX < -threshold) {
+		// Swipe left -> next FAQ
+		currentFAQIndex = (currentFAQIndex + 1) % faqData.length;
+	}
+	showFAQ(currentFAQIndex);
 });

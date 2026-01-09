@@ -14,68 +14,103 @@
   <hr>
 </header>
 
-<div class="wrapper">
-  <form id="uploadForm">
-    <input type="file" id="jsonFile" accept=".json,.zip" required style="display: none;">
-    <div class="file-upload-area" id="customUploadArea">
-      <p>Click here to upload your TikTok file (.zip or .json)</p>
-    </div>
-    <button id="analyzeButton" type="submit">Analyze</button>
-  </form>
-
-  <div id="status"></div>
-  <h2 id="resultsHeader" style="display: none;">Results:</h2>
-  <pre id="results" style="display: none;"></pre>
-</div>
-
-<div class="wrapper">
-  <h2 id="subtitle">How to Use</h2>
-  <div class="steps">
-    <div class="step-carousel">
-      <button class="nav-button" id="prevBtn">&#8592;</button>
-      <div class="image-container">
-        <img class="image" src="./assets/images/image0.jpeg" alt="Instructions image idx0" />
-        <img class="image" src="./assets/images/image1.jpeg" alt="Instructions image idx1" />
-        <img class="image" src="./assets/images/image2.jpeg" alt="Instructions image idx2" />
-        <img class="image" src="./assets/images/image3.jpeg" alt="Instructions image idx3" />
-        <img class="image" src="./assets/images/image4.jpeg" alt="Instructions image idx4" />
-        <img class="image" src="./assets/images/image5.jpeg" alt="Instructions image idx5" />
-        <img class="image" src="./assets/images/image6.jpeg" alt="Instructions image idx6" />
-        <img class="image" src="./assets/images/image7.jpeg" alt="Instructions image idx7" />
-        <img class="image" src="./assets/images/image8.jpeg" alt="Instructions image idx8" />
-        <img class="image" src="./assets/images/image9.jpeg" alt="Instructions image idx9" />
-        <img class="image" src="./assets/images/image10.jpeg" alt="Instructions image idx10" />
-        <img class="image" src="./assets/images/image11.jpeg" alt="Instructions image idx11" />
+<div class="wrapper main">
+  <div class="wrapper large">
+    <h2 id="subtitle">Which of Your Friends Are No Longer Following You Back?</h2>
+    <form id="uploadForm">
+      <input type="file" id="jsonFile" accept=".json,.zip" required style="display: none;">
+      <div class="file-upload-area" id="customUploadArea">
+        <p>Click here to upload your TikTok file (.zip or .json)</p>
       </div>
-      <button class="nav-button" id="nextBtn">&#8594;</button>
+      <button class="pushable" id="analyzeButton" type="submit">Analyze</button>
+    </form>
+
+    <div id="status"></div>
+    <h2 id="resultsHeader" style="display: none;">Results:</h2>
+    <pre id="results" style="display: none;"></pre>
+  </div>
+
+  <div class="wrapper">
+    <h2 id="subtitle">How to Use</h2>
+    <div class="steps">
+      <div class="step-carousel">
+        <button class="nav-button" id="prevBtn">&#8592;</button>
+        <div class="image-container">
+          <img class="image" src="./assets/images/image0.jpeg" alt="Instructions image idx0" />
+          <img class="image" src="./assets/images/image1.jpeg" alt="Instructions image idx1" />
+          <img class="image" src="./assets/images/image2.jpeg" alt="Instructions image idx2" />
+          <img class="image" src="./assets/images/image3.jpeg" alt="Instructions image idx3" />
+          <img class="image" src="./assets/images/image4.jpeg" alt="Instructions image idx4" />
+          <img class="image" src="./assets/images/image5.jpeg" alt="Instructions image idx5" />
+          <img class="image" src="./assets/images/image6.jpeg" alt="Instructions image idx6" />
+          <img class="image" src="./assets/images/image7.jpeg" alt="Instructions image idx7" />
+          <img class="image" src="./assets/images/image8.jpeg" alt="Instructions image idx8" />
+          <img class="image" src="./assets/images/image9.jpeg" alt="Instructions image idx9" />
+          <img class="image" src="./assets/images/image10.jpeg" alt="Instructions image idx10" />
+          <img class="image" src="./assets/images/image11.jpeg" alt="Instructions image idx11" />
+        </div>
+        <button class="nav-button" id="nextBtn">&#8594;</button>
+      </div>
+      <div id="imageDescription"></div>
     </div>
-    <div id="imageDescription"></div>
+  </div>
+
+  <div class="wrapper">
+    <h2 id="subtitle">See Who No Longer Follows You</h2>
+
+    <div class="two-forms">
+      <div class="follow-form">
+        <form id="uploadForm2">
+          <input type="file" id="jsonFile2" accept=".json,.zip" required style="display: none;">
+          <div class="file-upload-area" id="customUploadArea2">
+            <p>Upload the older file<br>(.zip or .json)</p>
+          </div>
+        </form>
+      </div>
+      <div class="follow-form">
+        <form id="uploadForm3">
+          <input type="file" id="jsonFile3" accept=".json,.zip" required style="display: none;">
+          <div class="file-upload-area" id="customUploadArea3">
+            <p>Upload the newer file<br>(.zip or .json)</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="two-forms-button">
+      <button class="pushable" id="compareButton">Compare Followers</button>
+    </div>
+    
+    <div id="status2"></div>
+    <h2 id="resultsHeader2" style="display: none;">Results</h2>
+    <pre id="results2" style="display: none;"></pre>
+
+  </div>
+
+  <div class="wrapper">
+    <h2 id="subtitle">Frequently Asked Questions</h2>
+    <div class="faq-carousel">
+      <button class="nav-button" id="faqPrevBtn">&#8592;</button>
+      <div class="faq-container">
+        <div class="faq-item" id="faqItem">
+          <h3 id="faqTitle"></h3>
+          <p id="faqAnswer"></p>
+        </div>
+      </div>
+      <button class="nav-button" id="faqNextBtn">&#8594;</button>
+    </div>
   </div>
 </div>
-
-<div class="wrapper">
-  <h2 id="subtitle">Frequently Asked Questions</h2>
-  <div class="faq-carousel">
-    <button class="nav-button" id="faqPrevBtn">&#8592;</button>
-    <div class="faq-container">
-      <div class="faq-item" id="faqItem">
-        <h3 id="faqTitle"></h3>
-        <p id="faqAnswer"></p>
-      </div>
-    </div>
-    <button class="nav-button" id="faqNextBtn">&#8594;</button>
-  </div>
-</div>
-
 <footer>
     <div class="footer">
-        <p>Last updated Jan 05, 2026</p>
+        <p>Last updated Jan 08, 2026</p>
         <p>©2025 PinkTok</p>
         <a href="https://github.com/eiguzman" target="_blank" rel="noopener noreferrer">View my GitHub profile</a>
     </div>
 </footer>
 
 <script src="./js/unfollow.js"></script>
+<script src="./js/compares.js"></script>
 <script src="./js/instructions.js"></script>
 <script src="./js/faq.js"></script>
 
