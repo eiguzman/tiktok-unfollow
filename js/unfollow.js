@@ -47,7 +47,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 	}
 
 	if (file.size > maxFileSize) {
-		alert(`File size exceeds the limit for ${fileNameLower.endsWith('.zip') ? 'ZIP' : 'JSON'} files. Please upload a smaller file.`);
+		alert(`File size exceeds the limit for ${fileNameLower.endsWith('.zip') ? 'ZIP' : 'JSON'} files.`);
 		return;
 	}
 
@@ -69,8 +69,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 					throw new Error(data.message || 'Error logging request.');
 				});
 			}
-			// Successful logging
-			processFile(); // Proceed with file processing
+			processFile();
 		})
 		.catch(err => {
 			statusDiv.textContent = 'Error: ' + err.message;
@@ -151,7 +150,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(e) {
 		if (notFollowingBack.length > 0) {
 			resultsPre.textContent = 'People you follow who do not follow back:\n' + notFollowingBack.join(', ');
 		} else {
-			resultsPre.textContent = 'Everyone you follow follows you back, or there are issues with the file.';
+			resultsPre.textContent = 'People you follow who do not follow back: 0. Either everyone you follow follows you back, or there was an issue generating the file.';
 		}
 		document.getElementById('resultsHeader').style.display = 'block';
 		document.getElementById('results').style.display = 'block';

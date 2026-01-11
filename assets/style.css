@@ -117,12 +117,14 @@ form {
 
 .two-forms {
     display: flex;
-    margin: 0;
+    margin: 0 auto;
     gap: 1rem;
 }
 
 .follow-form {
     flex: 1;
+    max-width: 165px;
+    min-width: 165px;
     width: 165px;
     justify-content: center;
     word-break: break-all;
