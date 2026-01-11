@@ -29,7 +29,11 @@ const faqData = [
 	},
 	{
 		title: "My friends list does not match my following list. I know I have an unfollower. Why does the site say I have 0 unfollowers?",
-		ans: "Unfortunately, data is not perfect. As large as TikTok and many social media platforms are, there are going to be mistakes, bugs, and errors in the way code is processed and handled. Many of your followers/following will show up as N/A (Not applicable), meaning that those accounts were banned, disabled, or their data was improperly processed. Many of your followers/following will also show up more than once, meaning that you or others quickly followed, unfollowed, and followed back. These mistakes are not permanent, and social media platforms perform a few checks per year to make sure these mistakes get fixed. If you notice a significant drop in followers or likes, it is most likely that the data was cleaned. Simply put: there is nothing you or this tool can do but wait for the data to get fixed."
+		ans: "Unfortunately, data is not perfect. As large as TikTok and many social media platforms are, there are going to be mistakes, bugs, and errors in the way code is processed and handled. These mistakes are not permanent, and social media platforms perform a few checks per year to make sure these mistakes get fixed. If you notice a significant drop in followers or likes, it is most likely that the data was cleaned. Simply put: there is nothing you or this tool can do but wait for the data to get fixed."
+	},
+	{
+		title: "What other issues can I expect from my data?",
+		ans: "Many of your followers/following will show up as N/A (Not applicable), meaning that those accounts were banned, disabled, or their data was improperly processed. Many of your followers/following will also show up more than once, meaning that you or others quickly followed, unfollowed, and followed back."
 	},	
 	{
 		title: "How often should I check for unfollowers?",
@@ -41,7 +45,7 @@ const faqData = [
 	},	
 	{
 		title: "The website says my file size is too big. What happened?",
-		ans: "Although we only require your followers and followings list, the script needs to parse all of your Profile and posts data. This includes every post your account has made. Post data is larger than followers data, and takes up most of the memory in the average user's data. To prevent excess data use, file sizes are limited for both .zip and .json formats. If you know how to extract .zip files, and if you know how to edit .json files, you can manually remove the 'Post' section, then upload the .json file."
+		ans: "Unless you have a million followers, make sure you are only requesting your followers and following data as shown in the images above. Old requests contains data on all of your posts, bloating your file size with unnecessary data. Only select to request your Profile and Settings data. Do not check more boxes than that."
 	},	
 	{
 		title: "I encountered an error in your site. How can I contact you about this?",

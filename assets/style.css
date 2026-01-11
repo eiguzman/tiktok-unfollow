@@ -394,7 +394,15 @@ footer {
     color: #25F4EE;
 }
 
+[data-theme='tiktok'] #faqPrevBtn {
+    color: #25F4EE;
+}
+
 [data-theme='tiktok'] #nextBtn {
+    color: #FE2C55;
+}
+
+[data-theme='tiktok'] #faqNextBtn {
     color: #FE2C55;
 }
 

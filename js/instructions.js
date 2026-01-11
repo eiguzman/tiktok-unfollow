@@ -1,16 +1,15 @@
 const descriptions = [
-	"1/12 \nGo to your profile and click on the menu icon (top-right corner)",
-	"2/12 \nClick on Settings and privacy",
-	"3/12 \nClick on Account",
-	"4/12 \nClick on Download your data",
-	"5/12 \nIn the Request data tab, click on Select data to download (gray text)",
-	"6/12 \nClick on Custom, then click on TikTok (gray right arrow)",
-	"7/12 \nSelect Profile and posts. Do not select the other options. Click Done",
-	"8/12 \nClick Select file format (gray text)",
-	"9/12 \nClick on JSON. Click Done",
-	"10/12 \nClick on Request data (bottom of the screen)",
-	"11/12 \nClick on the download data tab. Information may take a few minutes to load. Wait until your data is ready to download. This may take a few minutes, or up to a few hours (depending on file size, server issues, etc.)",
-	"12/12 \nWhen your data is ready to download, click Download (red button). The file should download as a .zip and not as a .json. You can now upload your .zip file directly to the area above"
+	"1/11 \nGo to your profile and click on the menu icon (top-right corner)",
+	"2/11 \nClick on Settings and privacy",
+	"3/11 \nClick on Account",
+	"4/11 \nClick on Download your data",
+	"5/11 \nIn the Request data tab, in the Select file format, click on the File format dropdown menu (gray text)",
+	"6/11 \nClick on JSON. Scroll down a bit",
+	"7/11 \nIn the Select data to download, in the TikTok section, press the Show More dropdown menu (gray text)",
+	"8/11 \nSelect Profile and Settings. Do not select anything else (It should say '1/10 selected' next to TikTok",
+	"9/11 \nClick on Request data (bottom of the screen)",
+	"10/11 \nClick on the download data tab. Wait until your data is ready to download (time depends on file size, server issues, etc.)",
+	"11/11 \nWhen your data is ready to download, click Download (red button). The file should download as a .zip and not as a .json. You can now upload your .zip file directly to the area above"
 ];
 
 const images = document.querySelectorAll('.image-container img');

@@ -22,6 +22,21 @@ function handleFileSelection(fileInput, uploadArea, setFileSelected, callback) {
     fileInput.addEventListener('change', () => {
         const file = fileInput.files[0];
 
+        // Define size limits based on file type
+        // 1m followers is ~90MB
+        const maxJsonSize = 94 * 1024 * 1024; // 25MB
+        const maxZipSize = 4 * 1024 * 1024;   // 4MB
+
+        // Inside handleFileSelection, after 'const file = fileInput.files[0];'
+        if (file.size > (file.name.toLowerCase().endsWith('.zip') ? maxZipSize : maxJsonSize)) {
+            alert(`File size exceeds the limit for ${file.name.toLowerCase().endsWith('.zip') ? 'ZIP' : 'JSON'} files. Please upload a smaller file.`);
+            uploadArea.innerHTML = `<p>Upload your TikTok file</p>`;
+            setFileSelected(false);
+            compareButtonVisibility();
+            callback(null);
+            return;
+        }
+
         if (!file) {
             uploadArea.innerHTML = `<p>Upload your TikTok file</p>`;
             setFileSelected(false);
