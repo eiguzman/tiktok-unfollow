@@ -6,7 +6,7 @@ const descriptions = [
 	"5/11 \nIn the Request data tab, in the Select file format, click on the File format dropdown menu (gray text)",
 	"6/11 \nClick on JSON. Scroll down a bit",
 	"7/11 \nIn the Select data to download, in the TikTok section, press the Show More dropdown menu (gray text)",
-	"8/11 \nSelect Profile and Settings. Do not select anything else (It should say '1/10 selected' next to TikTok",
+	"8/11 \nSelect Profile and Settings. Do not select anything else (it should say '1/10 selected' next to TikTok)",
 	"9/11 \nClick on Request data (bottom of the screen)",
 	"10/11 \nClick on the download data tab. Wait until your data is ready to download (time depends on file size, server issues, etc.)",
 	"11/11 \nWhen your data is ready to download, click Download (red button). The file should download as a .zip and not as a .json. You can now upload your .zip file directly to the area above"
