@@ -1,7 +1,7 @@
 const faqData = [
 	{
 		title: "What is this website?",
-		ans: "Tiktok Follower Analyzer is a user-friendly website that helps you identify which of your followers are not following you back. If you notice a decrease in followers, they will appear if you followed them. A tool to check all of your followers that unfollowed you is also available. This website works on mobile devices and on desktop browsers."
+		ans: "TikTok Follower Analyzer is a user-friendly website that helps you identify which of your followers are not following you back. If you notice a decrease in followers, they will appear if you followed them. A tool to check all of your followers that unfollowed you is also available. This website works on mobile devices and on desktop browsers."
 	},
 	{
 		title: "How does it work?",
