@@ -25,7 +25,7 @@ const faqData = [
 	},
 	{
 		title: "Does this work for Instagram too?",
-		ans: "No. Tools already exist to find instagram unfollowers, but none have yet to become publically available for TikTok."
+		ans: "No. A tool is currently being developed for Instagram unfollowers by me, but Meta's data collection is sloppy. You will need two data files to track your unfollowers."
 	},
 	{
 		title: "My friends list does not match my following list. I know I have an unfollower. Why does the site say I have 0 unfollowers?",
@@ -33,7 +33,7 @@ const faqData = [
 	},
 	{
 		title: "What other issues can I expect from my data?",
-		ans: "Many of your followers/following will show up as N/A (Not applicable), meaning that those accounts were banned, disabled, or their data was improperly processed. Many of your followers/following will also show up more than once, meaning that you or others quickly followed, unfollowed, and followed back."
+		ans: "Many of your followers/following will show up as N/A (Not Applicable), meaning that those accounts were banned, disabled, or their data was improperly processed. Many of your followers/following will also show up more than once, meaning that you or others quickly followed, unfollowed, and followed back."
 	},	
 	{
 		title: "How often should I check for unfollowers?",
@@ -53,7 +53,7 @@ const faqData = [
 	},	
 	{
 		title: "Is there any way I can support you for your work?",
-		ans: "Every little bit helps! Follow <a class=\"faq-link\" href=\"https://www.tiktok.com/@jessmorales__\" target=\"_blank\" rel=\"noopener noreferrer\">@jessmorales__</a> if you like this site or the pink aesthetic. Share this site with your friends and followers if they need this tool. Data and website management is expensive; please consider supporting me financially via <a class=\"faq-link\" href=\"https://www.paypal.com/paypalme/eiguzman\" target=\"_blank\" rel=\"noopener noreferrer\">my PayPal link</a> (even $1 or less goes a long way!)"
+		ans: "Every little bit helps! Follow <a class=\"faq-link\" href=\"https://www.tiktok.com/@jessmorales_\" target=\"_blank\" rel=\"noopener noreferrer\">@jessmorales_</a> if you like this site or the pink aesthetic. Share this site with your friends and followers if they need this tool. Data and website management is expensive; please consider supporting me financially via <a class=\"faq-link\" href=\"https://www.paypal.com/paypalme/eiguzman\" target=\"_blank\" rel=\"noopener noreferrer\">my PayPal link</a> (even $1 or less goes a long way!)"
 	}
 ]
 
